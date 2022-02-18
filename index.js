@@ -14,7 +14,7 @@ let transporter = nodemailer.createTransport({
   service: "gmail",
   auth: {
     user: 'nodejsmail49@gmail.com', // generated ethereal user
-    pass: 'AcerSvenDota2', // generated ethereal password
+    pass: 'notebook49hyper', // generated ethereal password
   },
 });
 
@@ -33,7 +33,7 @@ app.post('/sendMessage', async (req, res) => {
   let info = await transporter.sendMail({
     from: 'My portfolio page', // sender address
     to: "kolesnikov49r@gmail.com", // list of receivers
-    subject: "Test gmail", // Subject line
+    subject: subject, // Subject line
     html: `<b>Сообщение с вашего портфолио</b> 
     <div>message: ${message}</div>
     <div>contact: ${contact}</div>
